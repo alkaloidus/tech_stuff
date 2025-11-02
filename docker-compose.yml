@@ -1,6 +1,3 @@
-version: "3.9"
-
-# More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/
 services:
 
     transmission:
@@ -12,7 +9,7 @@ services:
             - PUID=$puid
             - PGID=$guid
             - TZ=$tzone
-#           - TRANSMISSION_WEB_HOME=/transmission-web-control/ #alternative gui /transmission-web-control/ or /kettu/ or /combustion-release/
+            - TRANSMISSION_WEB_HOME=/transmission-web-control/ #alternative gui /transmission-web-control/ or /kettu/ or /combustion-release/
         volumes:
             - ${app_data}/transmission:/config
             - ${media}/download:/downloads
