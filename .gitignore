@@ -1,0 +1,13 @@
+# --- secrets & runtime state — never commit ---
+*.env
+.env
+!*.env.example
+!.env.example
+*.key
+*.pem
+*.secret
+*.crt
+# runtime data / volumes if any land in-repo
+data/
+volumes/
+appdata/
